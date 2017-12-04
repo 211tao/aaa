@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (){
+            //1.点击 +1  如果到4 回到1
+            var oImg = document.getElementById("img");
+            var n = 1;  //声明变量，标识当前显示的图片
+            oImg.onclick = function (){
+                n = n + 1;
+                //假设 n > 4  n回到1
+                if(n > 4){n = 1;}
+                oImg.src = "img/"+n+".jpg";
+            }
+        }
+        /* 上午回顾
+          1. oP.innerHTML = "123"  会替换掉标签里面所有的内容
+          2.class 同时修改很多属性，  元素.className = "active"
+          3.字体 fontSize   12
+            按钮.onclick = function (){
+                n = n + 2;
+                if(n > 36){n = 36}
+            }
+           if(判断条件){条件成立执行}
+
+        * */
+
+    </script>
+</head>
+<body>
+<p><span>fdlf</span></p>
+<img src="img/1.jpg" alt="" id="img">
+</body>
+</html>

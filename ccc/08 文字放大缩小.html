@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{font-size: 12px;}
+    </style>
+    <script>
+        window.onload = function (){
+            var jia = document.getElementById("jia");
+            var jian = document.getElementById("jian");
+            var title = document.getElementById("title");
+            var n = 12;
+            jia.onclick = function (){
+                n = n + 2;  //36
+                console.log(n);
+                //js不允许出现-  使用驼峰标识
+                title.style.fontSize = n+"px";
+            };
+            jian.onclick = function (){
+                n = n - 2;
+                console.log(n);  //12
+                title.style.fontSize = n+"px";
+            }
+        }
+    </script>
+</head>
+<body>
+<button id="jia">+</button><button id="jian">-</button>
+<p id="title">《西游记》是中国古代第一部浪漫主义章回体长篇神魔小说。该书以“唐僧取经”这一历史事件为蓝本，通过作者的艺术加工，深刻地描绘了当时的社会现实。主要描写了孙悟空出世，后遇见了唐僧、猪八戒和沙僧三人，一路降妖伏魔，保护唐僧西行取经，经历了九九八十一难，终于到达西天见到如来佛祖，最终五圣成真的故事。
+    自《西游记》问世以来在民间广为流传，各式各样的版本层出不穷，明代刊本有六种，清代刊本、抄本也有七种，典籍所记已佚版本十三种。被译为英、法、德、意、西、手语、世（世界语）、俄、捷、罗、波、日、朝、越等文种。并发表了不少研究论文和专著，对这部小说作出了极高的评价。与《三国演义》《水浒传》《红楼梦》并称为中国古典四大名著。
+    《西游记》是中国古代第一部浪漫主义章回体长篇神魔小说。该书以“唐僧取经”这一历史事件为蓝本，通过作者的艺术加工，深刻地描绘了当时的社会现实。主要描写了孙悟空出世，后遇见了唐僧、猪八戒和沙僧三人，一路降妖伏魔，保护唐僧西行取经，经历了九九八十一难，终于到达西天见到如来佛祖，最终五圣成真的故事。
+</body>
+</html>

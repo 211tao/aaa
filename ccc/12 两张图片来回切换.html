@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (){
+            var oImg = document.getElementById("img");
+            var tig = 1; //1 显示第一张   2显示二
+            //1-2 2-1 两张图片切换
+            oImg.onclick = function (){
+                //> <  >=  <=  ==
+                //if(oImg.src == "img/1.jpg");不能使用相对路径作为判断条件
+                alert(oImg.src);
+                /*if(oImg.src == "http://localhost:63342/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5js/01%20javaScript/02%20%E6%93%8D%E4%BD%9Cjs%E5%B1%9E%E6%80%A7/img/1.jpg"){  //
+                    oImg.src = "img/2.jpg";
+                }不建议使用绝对路径判断*/
+                console.log(tig)  //1
+                //如果第一张显示第二张，否则显示第一张
+                if(tig == 1){
+                    oImg.src = "img/2.jpg";
+                    tig = 2;
+                }else {
+                    oImg.src = "img/1.jpg";
+                    tig = 1;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="img/1.jpg" alt="" id="img">
+    <!--<input type="password"><button>显示</button>-->
+</body>
+</html>

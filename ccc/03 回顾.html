@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="1.js">-->
+    <!--</script>-->
+    <script>
+        /*
+        1.行间
+        2.内嵌
+        3.外链  如果说script标签是用于外链的，不要在标签内部写代码，不会执行
+
+        js 入门三部曲 找到谁，加什么事件,发生什么事
+        document.getElementById("box");
+        document.getElementById("box").onclick = function(){
+                 alert("hello world")
+        }
+
+        5.var 声明变量存储  _ $ 字母 不能关键字
+        var a = 10;
+        var b;
+        b = 10;
+        var a,b,x,;
+        var a = 10,b=10;
+        var oDiv = document.getElementById("box")
+
+
+        6.页面加载完成之后再调用
+        window.onload = function(){
+
+        }
+
+
+
+
+
+        * */
+        window.onload = function (){
+//            var box;
+            var oDiv = document.getElementById("box");
+            oDiv.onclick = function (){
+               oDiv.style.display = "none";
+            }
+
+            document.getElementById("but").onclick = function (){
+                //获取value
+               /* var value = document.getElementById("in").value;
+                console.log(value);*/
+                //写
+                document.getElementById("in").value = "123";
+            }
+
+            //onclick onmouseover  onmouseout onmousemove onmouseup down
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="box" style="width: 100px;height: 100px;background: pink">fd</div>
+    <input type="text" id="in"><button id="but">确定</button>
+</body>
+</html>

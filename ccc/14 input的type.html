@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{}
+    </style>
+</head>
+<body>
+<input type="password" id="pass">
+<input type="text" style="display: none" id="text">
+<button id="but">显示密码</button>
+<script>
+    window.onload = function (){
+        var oInput = document.getElementById("pass");
+        var show = document.getElementById("text");
+        var oBut = document.getElementById("but");
+        var tig = 1;  //标志当前显示的状态 password=1  text=2  默认是password
+        //点击显示密码
+        oBut.onclick = function (){
+            if(tig == 1){  //pass
+                oInput.type = "text";  //ie 6 7 8 不兼容，不建议type
+                tig = 2;
+            }else {
+                oInput.type = "password";
+                tig = 1;
+            }
+        }
+
+
+        var tig = true;//password
+        oBut.onclick = function (){
+           if(tig == true){
+               //pass 隐藏  text 出现
+               oInput.style.display = "none";
+               show.style.display = "inline-block";
+               show.value  = oInput.value;
+               tig = false;
+           }else {
+               //pass 隐藏  text 出现
+               oInput.style.display = "inline-block";
+               show.style.display = "none";
+               oInput.value  = show.value;
+               tig = true;
+           }
+        }
+
+    }
+</script>
+</body>
+</html>

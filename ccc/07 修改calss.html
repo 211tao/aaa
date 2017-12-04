@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .default{width: 100px;height: 100px;background: peachpuff;}
+        .active{width: 200px;height: 200px;background: pink;}
+    </style>
+    <script>
+        window.onload = function (){
+            //pink 200 200
+            var active = document.getElementById("active");
+            var def = document.getElementById("def");
+            var oDiv = document.getElementById("box");
+            active.onclick = function (){
+                //什么时候修改类:同时改很多属性 ，样式跟着鼠标改变
+                oDiv.className = "active";
+                //oDiv.style.width = "200px";
+            }
+            def.onclick = function (){
+                oDiv.className = "default"
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--改主题-->
+    <button id="def">默认</button>
+    <button id="active">活动</button>
+   <div class="default" id="box"></div>
+</body>
+</html>
+

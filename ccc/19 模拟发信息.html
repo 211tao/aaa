@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (){
+            var oDiv = document.getElementById("box");
+            var oIn = document.getElementById("input");
+            var oBut = document.getElementById("but");
+
+            oBut.onclick = function (){
+                var value = "教师："+oIn.value +"<br>";
+                console.log(value);
+                //innerHTML  标签内容，全部替换，要留下前面，取出来，重新写入
+                oDiv.innerHTML = oDiv.innerHTML+ value;
+                //清空输入框
+                oIn.value = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    教师：<input type="text" id="input"><button id="but">发送</button>
+    <style>
+        div{width: 500px;height: 500px;border: 1px solid black;}
+    </style>
+</body>
+</html>

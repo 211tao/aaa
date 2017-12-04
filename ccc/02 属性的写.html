@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="img/1.jpg" alt="" id="img">
+<button id="but">下一张</button>
+<script>
+    var image = document.getElementById("img");
+    var but = document.getElementById("but");
+    var n = 1;
+    but.onclick = function (){
+        //显示下一张图片
+        n = n + 1;
+        //image.src = "img/n.jpg";  //字符串  拼接
+        image.src = "img/"+n+".jpg";  //+号遇到字符串变成连接符
+    }
+
+</script>
+</body>
+</html>

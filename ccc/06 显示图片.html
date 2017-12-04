@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (){
+            /*
+            1.点击按钮，获取input的值  2
+            2.改img的src属性
+            3.p的内容
+            * */
+            var input = document.getElementById("in");
+            var but = document.getElementById("but");
+            var title = document.getElementById("title");
+            var img = document.getElementById("img");
+            //var value = input.value;  //null
+            but.onclick = function (){
+                var value = input.value;
+                console.log(value);
+                img.src = "img/"+value+".jpg";
+                title.innerHTML = "当前显示的是img/"+value+".jpg";
+                input.value = "";
+            }
+
+        }
+    </script>
+</head>
+<body>
+<input type="text" placeholder="1-4" id="in">
+<button id="but">确定</button>
+<p id="title">当前显示的是img/1.jpg</p>
+<img src="img/1.jpg" alt="" id="img">
+</body>
+</html>
